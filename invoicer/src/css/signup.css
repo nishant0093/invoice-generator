@@ -1,121 +1,130 @@
-
 * {
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 body {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #8a9cff, #6f7cff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #0d1117;
+  color: #fff;
 }
 
-/* Container */
-.container {
-  width: 100%;
+.page {
   display: flex;
-  justify-content: center;
+  min-height: 100vh;
 }
 
-/* Glass Card */
-.signup-card {
-  width: 900px;
-  padding: 40px;
-  display: flex;
-  gap: 40px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-/* Left Section */
+/* LEFT */
 .left {
   flex: 1;
+  /* background: radial-gradient(circle at bottom, #5b4bff, #000); */
+  background-image: url("public/image/signup.jpg");
+    background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 60px;
 }
 
-.left h2 {
-  margin-bottom: 30px;
-  font-size: 28px;
-  color: #111;
+.left-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
-.left input {
-  width: 100%;
-  padding: 14px 18px;
-  margin-bottom: 18px;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  background: rgba(60, 33, 33, 0.85);
-  font-size: 15px;
+.left-content p {
+  color: rgb(233, 220, 220);
+  
 }
 
-/* Right Section */
-.right {
-  flex: 1;
+.floating-icons {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* gap: 40px; */
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.icon.purple { background: #a855f7; }
+.icon.blue { background: #3b82f6; }
+.icon.yellow { background: #facc15; }
+
+/* RIGHT */
+.right {
+  flex: 0.5;
+  background: #fff;
+  color: #000;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-/* Primary Button */
-.primary-btn {
-  width: 80%;
-  padding: 14px;
-  border-radius: 25px;
-  border: none;
-  background: #0f172a;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
+.form-card {
+  width: 360px;
+}
+
+.form-card h2 {
   margin-bottom: 20px;
 }
 
-/* Login Text */
-.login-text {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.login-text a {
-  color: #111;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-/* OR */
-.or {
-  font-size: 14px;
-  margin: 10px 0;
-  color: #333;
-}
-
-/* Social Buttons */
 .social {
-  width: 80%;
+  width: 100%;
   padding: 12px;
-  margin-top: 12px;
-  border-radius: 25px;
+  margin-bottom: 10px;
+  border-radius: 6px;
   border: 1px solid #ccc;
   background: #fff;
-  font-size: 14px;
   cursor: pointer;
 }
 
-.social.google {
-  color: #333;
+.social.google{
+  background-color: rgb(251, 248, 248);
+  color: rgb(216, 34, 49);
+  }
+
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  color: #777;
 }
 
-.social.facebook {
-  color: #1877f2;
+form label {
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
 }
 
-.signup-card form {
-  display: flex;
+form input,
+form select {
   width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form small {
+  color: #666;
+  font-size: 12px;
+}
+
+.submit {
+  width: 100%;
+  padding: 12px;
+  background: #24292f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signin {
+  margin-top: 15px;
+  font-size: 14px;
 }

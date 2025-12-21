@@ -34,7 +34,7 @@ const Signup = () => {
     submitform();
 
     console.log(
-      `form submitted ${form.fullName},${form.email},${form.password},${form.confirmPassword} `
+      `form submitted ${form.companyName},${form.companyEmail},${form.password},${form.confirmPassword} `
     );
     setform({
       companyName: "",
@@ -57,73 +57,89 @@ const Signup = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="signup-card">
-          {login === "signup" ? (
+      <div class="page">
+        <div class="left">
+          <div class="left-content">
+            <h1>Create your free account</h1>
+            <p>Create your invoices for free.</p>
+          </div>
+
+          <div class="floating-icons">
+            <img src="/public/image/logo.png" />
+            {/* <div class="icon purple"></div>
+            <div class="icon blue"></div>
+            <div class="icon yellow"></div> */}
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="form-card">
+            <h2>Sign Up</h2>
+
+            <button class="social google">Continue with Google</button>
+            {/* <button class="social apple">Continue with Apple</button> */}
+
+            <div class="divider">or</div>
+
             <form onSubmit={handleOnSubmit}>
-              <>
-                <div className="left">
-                  <h2>Sign Up</h2>
+              <label>Company Name</label>
+              <input
+                type="text"
+                name="companyName"
+                placeholder="Full Name"
+                value={form.companyName}
+                onChange={handleOnChange}
+              />
+              <label>Email</label>
+              <input
+                type="email"
+                name="companyEmail"
+                value={form.companyEmail}
+                placeholder="Email Address"
+                onChange={handleOnChange}
+              />
+              <label>Password</label>
+              <input
+                type="password"
+                name="password"
+                value={form.password}
+                placeholder="Password"
+                onChange={handleOnChange}
+              />
+              {/* <small>Password must be strong.</small> */}
+              <label>Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                value={form.confirmPassword}
+                placeholder="Confirm Password"
+                onChange={handleOnChange}
+              />
 
-                  <input
-                    type="text"
-                    name="companyName"
-                    placeholder="Full Name"
-                    value={form.companyName}
-                    onChange={handleOnChange}
-                  />
-                  <input
-                    type="email"
-                    name="companyEmail"
-                    value={form.companyEmail}
-                    placeholder="Email Address"
-                    onChange={handleOnChange}
-                  />
-                  <input
-                    type="password"
-                    name="password"
-                    value={form.password}
-                    placeholder="Password"
-                    onChange={handleOnChange}
-                  />
-                  <input
-                    type="password"
-                    name="confirmPassword"
-                    value={form.confirmPassword}
-                    placeholder="Confirm Password"
-                    onChange={handleOnChange}
-                  />
-                </div>
+              {/* <label>Email</label>
+              <input type="email" placeholder="Email" />
 
-                <div className="right">
-                  <button className="primary-btn" type="submit">
-                    Sign Up
-                  </button>
+              <label>Password</label>
+              <input type="password" placeholder="Password" />
+              <small>Password must be strong.</small>
 
-                  <p className="login-text">
-                    Already have an account?{" "}
-                    <a
-                      href="#"
-                      onClick={() =>
-                        setlogin(login == "signup" ? "login" : "signup")
-                      }
-                    >
-                      Log in
-                    </a>
-                  </p>
+              <label>Username</label>
+              <input type="text" placeholder="Username" /> */}
 
-                  <span className="or">Or</span>
+              {/* <label>Country</label>
+              <select>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+              </select> */}
 
-                  <button className="social google">Sign up with Google</button>
-                  <button className="social facebook">
-                    Sign up with Facebook
-                  </button>
-                </div>
-              </>
+              <button class="submit">Create account</button>
             </form>
-          ) : (
-            <>{/* <Login /> */}</>
-          )}
+
+            <p class="signin">
+              Already have an account? <a href="#">Sign in →</a>
+            </p>
+          </div>
         </div>
       </div>
     </>
