@@ -1,0 +1,121 @@
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #8a9cff, #6f7cff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Glass Card */
+.signup-card {
+  width: 900px;
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Left Section */
+.left {
+  flex: 1;
+}
+
+.left h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #111;
+}
+
+.left input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: rgba(60, 33, 33, 0.85);
+  font-size: 15px;
+}
+
+/* Right Section */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Primary Button */
+.primary-btn {
+  width: 80%;
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  background: #0f172a;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Login Text */
+.login-text {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-text a {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* OR */
+.or {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Social Buttons */
+.social {
+  width: 80%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.social.google {
+  color: #333;
+}
+
+.social.facebook {
+  color: #1877f2;
+}
+
+.signup-card form {
+  display: flex;
+  width: 100%;
+}
