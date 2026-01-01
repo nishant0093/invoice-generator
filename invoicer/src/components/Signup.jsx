@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "../css/signup.css";
-import Login from "./Login";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
-  const [login, setlogin] = useState("signup");
-
   const [form, setform] = useState({
     companyName: "",
     companyEmail: "",
@@ -27,7 +25,7 @@ const Signup = () => {
       if (response.ok) {
         console.log("response received ok");
       }
-      const data = response.json();
+      const data = await response.json();
       console.log(data);
     };
 
@@ -57,29 +55,29 @@ const Signup = () => {
 
   return (
     <>
-      <div class="page">
-        <div class="left">
-          <div class="left-content">
+      <div className="page">
+        <div className="left">
+          <div className="left-content">
             <h1>Create your free account</h1>
             <p>Create your invoices for free.</p>
           </div>
 
-          <div class="floating-icons">
+          <div className="floating-icons">
             <img src="/public/image/logo.png" />
-            {/* <div class="icon purple"></div>
-            <div class="icon blue"></div>
-            <div class="icon yellow"></div> */}
+            {/* <div className="icon purple"></div>
+            <div className="icon blue"></div>
+            <div className="icon yellow"></div> */}
           </div>
         </div>
 
-        <div class="right">
-          <div class="form-card">
+        <div className="right">
+          <div className="form-card">
             <h2>Sign Up</h2>
 
-            <button class="social google">Continue with Google</button>
-            {/* <button class="social apple">Continue with Apple</button> */}
+            <button className="social google">Continue with Google</button>
+            {/* <button className="social apple">Continue with Apple</button> */}
 
-            <div class="divider">or</div>
+            <div className="divider">or</div>
 
             <form onSubmit={handleOnSubmit}>
               <label>Company Name</label>
@@ -133,11 +131,10 @@ const Signup = () => {
                 <option>UK</option>
               </select> */}
 
-              <button class="submit">Create account</button>
+              <button className="submit">Create account</button>
             </form>
-
-            <p class="signin">
-              Already have an account? <a href="#">Sign in →</a>
+            <p className="signin">
+              Already have an account? <Link to="/">Sign in →</Link>
             </p>
           </div>
         </div>
